@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -14,6 +13,8 @@ function App() {
   }
   return (
     <div>
+      <h1>Counter</h1>
+
       <button onClick={add}> + </button>
       {count}
       <button onClick={sub}> - </button>
