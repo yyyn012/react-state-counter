@@ -1,18 +1,21 @@
 import React from "react";
 
 function Tool({ count, setCount }) {
-  const addHandler = (e) => {
+  const increaseHandler = (e) => {
     setCount((count) => count + 1);
   };
-
-  const minusHandler = (e) => {
+  const decreaseHandler = (e) => {
     setCount((count) => count - 1);
+  };
+  const resetHandler = (e) => {
+    setCount((count) => (count = 0));
   };
   return (
     <div>
-      <h1>Count : {count}</h1>
-      <button onClick={addHandler}>Increment</button>
-      <button onClick={minusHandler}>Decrease</button>
+      <h1>Counter : {count}</h1>
+      <button onClick={increaseHandler}>Increase</button>
+      <button onClick={decreaseHandler}>Decrease</button>
+      <button onClick={resetHandler}>Reset</button>
     </div>
   );
 }

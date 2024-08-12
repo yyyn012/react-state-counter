@@ -5,14 +5,9 @@ import Tool from "./Tool";
 function App() {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    console.log(`useEffect : ${Date()}`);
+    console.log(`${Date()}`);
   }, []);
-
-  return (
-    <div>
-      <Tool count={count} setCount={setCount} />
-    </div>
-  );
+  return <Tool count={count} setCount={setCount} />;
 }
 
 export default App;
